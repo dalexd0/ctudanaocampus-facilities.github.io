@@ -1,6 +1,6 @@
 <?php
 
-   $connection = mysqli_connect('localhost','root','','book_db');
+   $connection = mysqli_connect('dalexd0','root','','book_form.sql');
 
    if(isset($_POST['send'])){
       $name = $_POST['name'];
@@ -15,7 +15,7 @@
       $request = " insert into book_form(name, email, phone, address, location, guests, arrivals, leaving) values('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving') ";
       mysqli_query($connection, $request);
 
-      header('location:book.php'); 
+      header('location:book.html'); 
 
    }else{
       echo 'something went wrong please try again!';
